@@ -1,0 +1,63 @@
+
+
+@media (max-width: 740px) {
+
+  header,
+  .view {
+    height: 500px !important;
+    background-attachment: scroll !important;
+  }
+}
+
+header .view{
+  background: url('../../assets/images/landscape-1802340_1920.jpg')no-repeat center center fixed !important;
+  background-size: cover;
+  height: 500px;
+}
+
+.navbar{
+
+}
+
+.top-nav-collapse {
+  background-color: #78909c !important;
+
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #78909c !important;
+  }
+}
+
+h1 {
+  letter-spacing: 8px;
+}
+
+h5 {
+  letter-spacing: 3px;
+}
+
+.hr-light {
+  border-top: 3px solid #fff;
+  width: 80px;
+}
+
+.card-image{
+  background-size: cover;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  font-size: 12px;
+  line-height: 1.42857;
+
+}
+

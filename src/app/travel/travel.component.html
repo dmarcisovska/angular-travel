@@ -1,0 +1,106 @@
+<header>
+
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="fa fa-tree left"></i></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link waves-effect waves-light" routerLinkActive="active"  routerLink="/home">Home <span class="sr-only">(current)</span> </a>
+
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link waves-effect waves-light" routerLinkActive="active" routerLink="/travel">Travel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-effect waves-light" routerLinkActive="active"  routerLink="/contact">Contact</a>
+          </li>
+        </ul>
+        <a class="p-2 fa-lg fb-ic" href="https://github.com/dmarcisovska" target="_blank">
+          <i class="fa fa-github white-text"> </i>
+        </a>
+
+        <a class="p-2 fa-lg tw-ic" href="https://www.linkedin.com/in/denisa-marcisovska-253b4426/" target="_blank">
+          <i class="fa fa-linkedin white-text"> </i>
+        </a>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Intro Section -->
+  <div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}'>
+    <div class="full-bg-img mask flex-center rgba-black-slight">
+      <div class="container flex-center">
+        <div class="row pt-5 mt-3">
+          <div class="col-md-12">
+            <div class="text-center">
+              <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-3 wow fadeInDown" data-wow-delay="0.3s"><strong>Travel</strong></h1>
+              <hr class="hr-light mt-4 wow fadeInDown" data-wow-delay="0.4s">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+<!--Main Navigation-->
+
+<!--Main Layout-->
+<main>
+
+  <div class="container">
+
+    <!--Grid row-->
+    <div class="row py-5 mt-4">
+
+      <!--Grid column-->
+      <div class="col-md-12 text-center">
+
+
+        <h2 class="mb-5"> Travel Options</h2>
+        <p class="mb-3">Click on each trabel option listed below to learn more about each place and to leave a review.</p>
+
+
+      </div>
+      <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+    <div class="row mb-5">
+
+      <div *ngFor="let place of places" class=" d-flex align-items-stretch col-md-6">
+
+        <!-- Card -->
+        <div class="card card-image mb-3 mt-3" [ngStyle]="{'background-image':'url(' + place.image + ')'}">
+
+          <!-- Content -->
+          <div class="text-white text-center d-flex align-items-center rgba-black-light py-5 px-4">
+            <div>
+              <!--   <h5 class="pink-text"><i class="fa fa-pie-chart"></i> Ocean</h5> -->
+              <h3 class="card-title pt-2"><strong>{{place.name}}</strong></h3>
+              <p>{{place.description}}</p>
+
+              <a mdbBtn color="pink" class="waves-light" mdbWavesEffect [routerLink]="['/placedetails', place.id]"><i class="fa fa-info-circle left"></i> Learn More</a>
+            </div>
+          </div>
+          <!-- Content -->
+        </div>
+        <!-- Card -->
+      </div>
+    </div>
+
+    <!-- container -->
+  </div>
+
+</main>
+<!--Main Layout-->
+

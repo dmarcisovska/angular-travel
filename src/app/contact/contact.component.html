@@ -1,0 +1,149 @@
+<header>
+
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="fa fa-tree left"></i></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link waves-effect waves-light" routerLinkActive="active"  routerLink="/home">Home <span class="sr-only">(current)</span> </a>
+
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link waves-effect waves-light" routerLinkActive="active" routerLink="/travel">Travel</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link waves-effect waves-light" routerLinkActive="active"  routerLink="/contact">Contact</a>
+          </li>
+        </ul>
+        <a class="p-2 fa-lg fb-ic" href="https://github.com/dmarcisovska" target="_blank">
+          <i class="fa fa-github white-text"> </i>
+        </a>
+
+        <a class="p-2 fa-lg tw-ic" href="https://www.linkedin.com/in/denisa-marcisovska-253b4426/" target="_blank">
+          <i class="fa fa-linkedin white-text"> </i>
+        </a>
+
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Intro Section -->
+  <div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}'>
+    <div class="full-bg-img mask flex-center">
+      <div class="container flex-center">
+        <div class="row pt-5 mt-3">
+          <div class="col-md-12">
+            <div class="text-center">
+              <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-3 wow fadeInDown" data-wow-delay="0.3s"><strong>Contact</strong></h1>
+              <hr class="hr-light mt-4 wow fadeInDown" data-wow-delay="0.4s">
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+<!--Main Navigation-->
+
+<!--Main Layout-->
+<main>
+
+  <div class="container">
+
+    <!--Grid row-->
+    <div class="row py-5 mt-2">
+
+      <!--Grid column-->
+      <div class="col-sm-12 text-center mb-4">
+
+        <p>This is a fake contact form for demonstration purposes only.</p>
+
+      </div>
+      <!--Grid column-->
+
+
+      <div class="col-sm">
+
+
+      </div>
+
+      <div class="col-sm-6">
+
+        <!-- Material form login -->
+        <div class="card">
+
+          <h5 class="card-header default-color white-text text-center py-4">
+            <strong>CONTACT US</strong>
+          </h5>
+
+          <!--Card content-->
+          <div class="card-body px-lg-5 pt-0">
+
+            <!-- Form -->
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="text-center" style="color: #757575;">
+
+              <div class="form-row mb-4 mt-4">
+
+                <div class="col">
+                  <!-- First name -->
+                  <input formControlName="firstname" type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
+                  <span class="errors" *ngIf="formErrors.firstname">{{formErrors.firstname}}</span>
+
+                </div>
+
+                <div class="col">
+                  <!-- Last name -->
+                  <input formControlName="lastname" type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name">
+                  <span class="errors" *ngIf="formErrors.lastname">{{formErrors.lastname}}</span>
+                </div>
+              </div>
+
+
+              <!-- Email -->
+
+              <input formControlName="email" type="email" id="defaultLoginFormEmail" class="form-control mb-4 mt-4" placeholder="E-mail" >
+              <span class="errors" *ngIf="formErrors.email">{{formErrors.email}}</span>
+
+              <div class="form-group">
+                <textarea formControlName="message" class="form-control rounded" id="exampleFormControlTextarea2" rows="3" placeholder="Message"></textarea>
+              </div>
+
+              <button class="btn btn-default btn-block rounded" *ngIf="contactForm.invalid" disabled type="submit">Send</button>
+              <button class="btn btn-default btn-block rounded" *ngIf="contactForm.valid"  type="submit">Send</button>
+
+            </form>
+            <!-- Form -->
+
+          </div>
+
+        </div>
+        <!-- Material form login -->
+
+
+      </div>
+
+      <div class="col-sm">
+
+      </div>
+
+
+    </div>
+    <!--Grid row-->
+
+  </div>
+
+</main>
+<!--Main Layout-->
+
+

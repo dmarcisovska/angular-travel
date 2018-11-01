@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+
+@import '~css-star-rating/scss/star-rating';
+
+.big-icon {
+  font-size: 32px;
+}
+
+
+
+.card-image{
+  background-size: cover;
+}
+
+.flex-spacer {
+  flex: 1 1 auto;
+}
+
+.rating {
+  display: flex;
+  align-items: left !important;
+  justify-content: left !important;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+
+/* Override Colors by using style rules */
+.rating.color-negative .star-container .star {
+  svg {
+    fill: #868686 !important;;
+  }
+  i {
+    color: #868686 !important;;
+  }
+}
+
+.rating.color-ok .star-container .star {
+  svg {
+    fill: #868686 !important;;
+  }
+  i {
+    color: #868686 !important;;
+  }
+}
+
+.rating.color-positive .star-container .star {
+  svg {
+    fill: #868686 !important;
+  }
+  i {
+    color: #868686 !important;
+  }
+}
+
+.rating.color-default .star-container .star {
+  svg {
+    fill: #868686 !important;;
+  }
+  i {
+    color: #868686 !important;;
+  }
+}
